@@ -83,11 +83,7 @@ SOFTWARE.
 
   //get all child dropdowns starting from a DOM element
   function getChildDropdowns(target, dataKey) {
-    while (target[0].tagName !== 'BODY' && target.data(dataKey) === undefined) {
-      target = target.parent();
-    }
-
-    var elements = target.find('*'),
+    var elements = target.find('.dropdown_nested'),
       elementsLength = elements.length,
       dropdowns = [];
 
